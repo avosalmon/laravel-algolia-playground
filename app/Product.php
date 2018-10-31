@@ -19,4 +19,12 @@ class Product extends Model
      * @var array
      */
     protected $guarded = ['id'];
+
+    /**
+     * The tags that belong to the product.
+     */
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
